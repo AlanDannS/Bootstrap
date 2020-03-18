@@ -12,11 +12,10 @@
     <title>Platzi Conf Hawaii</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="56">
     <!-- Header -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark ">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-
             <a class="navbar-brand" href="#">
                 <img src="sources/img/platzi-logo.png" alt="Platzi Logo"> Conf Hawaii
             </a>
@@ -24,22 +23,22 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">La Conferencia</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#main">La Conferencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Los Oradores</a>
+                        <a class="nav-link" href="#speakers">Los Oradores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">El Lugar y la Fecha</a>
+                        <a class="nav-link" href="#place-time">El Lugar y la Fecha</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Conviertete en Orador</a>
+                        <a class="nav-link" href="#conviertete-en-orador">Conviertete en Orador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-platzi" href="#">Compra Tickers</a>
+                        <a class="nav-link text-platzi" href="#" data-target="#modalCompra" data-toggle="modal">Compra Tickers</a>
                     </li>
                 </ul>
             </div>
@@ -68,8 +67,8 @@
                             <p class="d-none d-md-block">Platzi Conf llega por primera vez a Hawaii! Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de internet. Ven a conocer a miembros del Teamo Platzi, a
                                 otros estudiantes de Platzi y a los oradores de primer nivel que tenemos para ti. Te esperamos!
                             </p>
-                            <a href="#" class="btn btn-outline-light">Quiero ser Orador</a>
-                            <button class="btn btn-platzi">Comprar Tickets</button>
+                            <a href="#conviertete-en-orador" class="btn btn-outline-light">Quiero ser Orador</a>
+                            <button class="btn btn-platzi" data-target="#modalCompra" data-toggle="modal">Comprar Tickets</button>
                         </div>
                     </div>
                 </div>
@@ -148,7 +147,7 @@
                     <h2 class="mt-2">Honolulu - Ocutubre 2025</h2>
                     <p>
                         Honolulu u Honolulú2 es la capital y localidad más grande del estado de Hawái, en los Estados Unidos.​ Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste
-                        de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla (aproximadamente 600 km² de superficie).
+                        de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla (aproximadamente <abbr data-toggle="tooltip" title="Unidad de medida">600 km²</abbr>                        de superficie).
                     </p>
                     <a target="_blank" href="https://es.wikipedia.org/wiki/Honolulu" class="btn btn-outline-light">Conoce mas</a>
                 </div>
@@ -156,6 +155,51 @@
         </div>
     </section>
     <!-- Lugar y Fecha -->
+
+    <!-- Conviertete en Orador -->
+    <section id="conviertete-en-orador" class="pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col text-uppercase text-center">
+                    <small>Conviertete en un</small>
+                    <h2>Orador</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    Anotate como orador para dar una charla <abbr data-toggle="tooltip" title="Charlas de 5 minutos">ignite</abbr>.carousel-innerCuentanos de que quieres Hablar
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-10 offset-md-1 offset-lg-2 pt-2">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-6">
+                                <input type="text" class="form-control" placeholder="Nombre(s)">
+                            </div>
+                            <div class="form-group  col-12 col-md-6">
+                                <input type="text" class="form-control" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <textarea name="text" class="form-control form-control-lg" placeholder="Sobre que quieres hablar"></textarea>
+                                <small class="form-text text-muted">
+                                    Recuerda incluir un titulo para tu charla
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <button type="button" class="btn btn-platzi btn-block">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Conviertete en Orador -->
 
     <!-- Footer -->
     <footer id="footer" class="pb-4 pt-4">
@@ -175,11 +219,48 @@
         </div>
     </footer>
     <!-- Footer -->
+    <!-- Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Comprar Tickets</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-warning" role="alert">
+                        Recibiras un Correo de Confirmacion si Sales Sorteado
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-platzi">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="sources/js/index.js"></script>
 </body>
 
 </html>
