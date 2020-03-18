@@ -55,3 +55,12 @@ footer a {
     color: #fff;
     text-decoration: none;
 }
+
+#place-time img {
+    max-width: 100%;
+}
+
+#place-time {
+    background-color: #343a40;
+    color: #fff;
+}
